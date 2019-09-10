@@ -11,22 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::post('/post', 'PagesController@login');
+  
 
-Route::get('/about', function () {
-    return view('about');
-});
 
-Route::get('/rules', function () {
-    return view('rules');
-});
 
-Route::get('/register', function () {
-    return view('register');
-});
+
+
+
+Route::get('/post', 'PagesController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
