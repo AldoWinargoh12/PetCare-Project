@@ -35,3 +35,8 @@ Route::get('/advertisement', function () {
     return view('pageTemplate.showAd');
 });
 
+Route::get('/createAd', function () {
+    return view('pageTemplate.createAd');
+});
+
+
