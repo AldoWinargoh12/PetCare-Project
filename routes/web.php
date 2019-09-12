@@ -32,11 +32,12 @@ Route::get('/register', function () {
 });
 
 Route::get('/advertisement', function () {
-    return view('pageTemplate.showAd');
+    return view('showAd');
 });
 
-Route::get('/createAd', function () {
+Route::get('/createAdvertisement', function () {
     return view('pageTemplate.createAd');
 });
 
+Route::resource('advertisements', 'AdvertisementController');
 
