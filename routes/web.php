@@ -30,3 +30,17 @@ Route::get('/rules', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::get('/advertisement', function () {
+    return view('pageTemplate.showAd');
+});
+
+Route::get('/editcredentials', function () {
+    return view('editcredentials');
+});
+
+Route::get('/createAd', function () {
+    return view('pageTemplate.createAd');
+});
+
+

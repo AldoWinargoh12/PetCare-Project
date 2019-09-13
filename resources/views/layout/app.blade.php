@@ -11,6 +11,10 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="<?php echo asset('css/petcare.css')?>" type="text/css"> 
 
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+
         <!-- Styles -->
     </head>
     <body>
@@ -22,13 +26,13 @@
             <h2 id=header>A Second home for all sort of Animals</h1>
             </div>
         </header>
-        <nav>
+        <nav id=header>
         <button class="button buttonNav" onclick="window.location='{{ url('home') }}'">Home</button>
         <button class="button buttonNav" onclick="window.location='{{ url('about') }}'">About</button>
         <button class="button buttonNav" onclick="window.location='{{ url('rules') }}'">Rules</button>
-        <button class="button buttonNav">Listing</button>
+        <button class="button buttonNav" onclick="window.location='{{ url('advertisement') }}'">Advertisement</button>
         <button class="button buttonNav">Register</button>
-        <button class="button buttonNav">Profile</button>
+        <button class="button buttonNav" onclick="window.location='{{ url('editcredentials') }}'" >Profile</button>
 
         </nav>
 
@@ -47,11 +51,7 @@
         </main>
 
         <footer>
-		<div class="jumbotron jumbotron-fluid" id=jumbotron>
-  <div class="container">
     <p class="lead">&copy; PetCare Project</p>
-  </div>
-</div>
 	</footer>
     </div>
     
