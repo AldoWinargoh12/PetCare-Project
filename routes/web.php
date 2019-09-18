@@ -30,3 +30,22 @@ Route::get('/rules', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::get('/advertisement', function () {
+    return view('showAd');
+});
+
+Route::get('/createAdvertisement', function () {
+    return view('pageTemplate.createAd');
+});
+
+Route::get('/search', function () {
+    return view('pageTemplate.liveSearch');
+});
+
+
+Route::resource('advertisements', 'AdvertisementController');
+
+Route::get('/live_search', 'LiveSearch@index');
+Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action');
+
