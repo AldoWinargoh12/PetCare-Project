@@ -1,0 +1,19 @@
+runtime: php
+env: flex
+
+runtime_config:
+   document_root: public
+
+skip_files:
+   - .env 
+
+env_variables:
+   APP_LOG: errorlog
+   APP_KEY: DXBVV8TkGLTKqb0dvud79HXvQ1jisN0HGTKyWb0+5ec=
+   CACHE_DRIVER: database
+   SESSION_DRIVER: database
+   DB_HOST: localhost
+   DB_DATABASE: PETCARE
+   DB_USERNAME: root
+   DB_PASSWORD: petcare
+   DB_SOCKET: "/cloudsql/petcare-project:australia-southeast1:petcare-project"

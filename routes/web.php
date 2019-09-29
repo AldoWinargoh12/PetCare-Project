@@ -11,33 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'PagesController@home');
+Route::get('/petregister', function () {
+    return view('petregister');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::resource('contacts', 'ContactController');
 
-Route::get('/about', function () {
-    return view('about');
-});
 
-Route::get('/rules', function () {
-    return view('rules');
-});
+Auth::routes();
 
-Route::get('/register', function () {
-    return view('register');
-});
-
-Route::get('/advertisement', function () {
-    return view('showAd');
-});
-
-Route::get('/createAdvertisement', function () {
-    return view('pageTemplate.createAd');
-});
-
-Route::resource('advertisements', 'AdvertisementController');
-
+Route::get('/home', 'HomeController@index')->name('home');

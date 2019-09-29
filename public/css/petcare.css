@@ -58,8 +58,6 @@
                 overflow:hidden;
                 height:20%;
                 background-color:#3CAEA3;
-                padding-top:30px;
-                padding-bottom:30px;
                 }
 
 
@@ -277,15 +275,4 @@
                 background-color:white;
                 margin-top:10px;
             }
-
-            div#createAd{
-                width:700px;
-                float:left;
-                margin-left:100px;
-            }
-
-            textarea#desc{
-                height:300px;
-            }
-          
               
