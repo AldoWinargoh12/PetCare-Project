@@ -6,11 +6,11 @@
 <nav id=adView>
         <button class="button buttonAdSelect" onclick="window.location='{{ url('advertisements') }}'">View Advertisement</button>
         <button class="button buttonAdSelect" onclick="window.location='{{ url('createAdvertisement') }}'">Create Advertisement</button>
-
+        <button class="button buttonAdSelect" onclick="window.location='{{ url('live_search') }}'">Live Search</button>
         </nav>
 
   <br />
-  <h3 aling="center">Add Data</h3>
+  <h3 aling="center">fill your Advertisement Info here</h3>
   <br />
   @if(count($errors) > 0)
   <div class="alert alert-danger">
@@ -47,5 +47,6 @@
    </div>
   </form>
   </div>
+</div>
 
 @endsection

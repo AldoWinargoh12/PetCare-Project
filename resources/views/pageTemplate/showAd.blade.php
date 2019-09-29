@@ -6,7 +6,7 @@
 <nav id=adView>
         <button class="button buttonAdSelect" onclick="window.location='{{ url('advertisements') }}'">View Advertisement</button>
         <button class="button buttonAdSelect" onclick="window.location='{{ url('createAdvertisement') }}'">Create Advertisement</button>
-
+        <button class="button buttonAdSelect" onclick="window.location='{{ url('live_search') }}'">Live Search</button>
         </nav>
 
 <p>list of ads shown here

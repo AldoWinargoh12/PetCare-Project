@@ -45,8 +45,9 @@
             </div>
 
             <div id=maincontent>
+            <div id=content>
                 @yield('content')
-
+            </div>
             </div>
 
         </main>
