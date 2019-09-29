@@ -30,3 +30,14 @@ Route::get('/rules', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::get('/advertisement', function () {
+    return view('showAd');
+});
+
+Route::get('/createAdvertisement', function () {
+    return view('pageTemplate.createAd');
+});
+
+Route::resource('advertisements', 'AdvertisementController');
+
