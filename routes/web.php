@@ -15,9 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
 
 Route::get('/about', function () {
     return view('about');
@@ -48,5 +45,22 @@ Route::resource('advertisements', 'AdvertisementController');
 
 Route::get('/live_search', 'LiveSearch@index');
 Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action');
+
+
+
+
+Route::get('/', 'PagesController@home');
+Route::get('/petregister', function () {
+    return view('petregister');
+});
+
+Route::resource('contacts', 'ContactController');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
 
 
