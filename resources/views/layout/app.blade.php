@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="<?php echo asset('css/petcare.css')?>" type="text/css"> 
 
         <link rel="stylesheet" href="/css/bootstrap.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="/js/jquery-2.2.4.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
 
@@ -31,9 +30,9 @@
         <button class="button buttonNav" onclick="window.location='{{ url('home') }}'">Home</button>
         <button class="button buttonNav" onclick="window.location='{{ url('about') }}'">About</button>
         <button class="button buttonNav" onclick="window.location='{{ url('rules') }}'">Rules</button>
-        <button class="button buttonNav" onclick="window.location='{{ url('advertisements') }}'">advertisement</button></button>
+        <button class="button buttonNav" onclick="window.location='{{ url('advertisements') }}'">advertisement</button>
         <button class="button buttonNav">Register</button>
-        <button class="button buttonNav">Profile</button>
+        <button class="button buttonNav" onclick="window.location='{{ url('editcredentials') }}'">Profile</button>
 
         </nav>
 
@@ -45,9 +44,8 @@
             </div>
 
             <div id=maincontent>
-            <div id=content>
                 @yield('content')
-            </div>
+
             </div>
 
         </main>

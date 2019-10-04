@@ -39,18 +39,9 @@ Route::get('/createAdvertisement', function () {
     return view('pageTemplate.createAd');
 });
 
-Route::get('/search', function () {
-    return view('pageTemplate.liveSearch');
+Route::get('/editcredentials', function () {
+    return view('pageTemplate.editcredentials');
 });
 
-
 Route::resource('advertisements', 'AdvertisementController');
-
-Route::get('/live_search', 'LiveSearch@index');
-Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action');
-
-Route::get('/matchmaking', 'matchmaking@index');
-Route::get('/matchmaking/action', 'matchmaking@action')->name('matchmaking.action');
-
-
 

@@ -30,16 +30,6 @@
                 background-color:#20639B;
                 }
 
-                div#content{
-                    padding-top:50px;
-                    margin-top:0px;
-                    text-align:center;
-                    margin-left:25px;
-                    width:850px;
-                    overflow:hidden;
-                    height:20%;
-                    }
-
             div#sidecontent{
                 float:left;
                 text-align:center;
@@ -68,6 +58,8 @@
                 overflow:hidden;
                 height:20%;
                 background-color:#3CAEA3;
+                padding-top:30px;
+                padding-bottom:30px;
                 }
 
 
@@ -196,7 +188,7 @@
                 float:left;
                 margin-top:30px;
                 margin-bottom:30px;
-                width:850px;
+                width:900px;
                 height:40px;
                 text-align:center;
             }
@@ -206,7 +198,7 @@
                 margin-right:25px;
                 margin-top:5px;
                 background-color: white; 
-                width:200px;
+                width:250px;
                 height:40px;
                 color: black; 
                 border: 2px solid #f44336;
@@ -217,14 +209,14 @@
                 margin-right:25px;
                 margin-top:5px;
                 background-color: #f44336;
-                width:200px;
+                width:250px;
                 height:40px;
                 color: white;
               }
 
             div#AdContainer{
+                margin-left:50px;
                 width:800px;
-                margin-left:25px;
                 height:220px;
                 background-color:blue;
                 margin-bottom:50px;
@@ -287,16 +279,28 @@
             }
 
             div#createAd{
+                width:700px;
                 float:left;
-                text-align:center;
-                width:600px;
-                margin-left:150px;
-                margin-top:10px;
-                padding-top:50px;
-                padding-bottom:50px;
+                margin-left:100px;
             }
 
             textarea#desc{
-                height:200px;
+                height:300px;
             }
+            
+            fieldset { 
+                border: none;
+                padding: 0;
+              }
+
+              div#information {
+                  border: none;
+                  padding:0;
+              }
+
+              form {
+                width: max-content;
+                margin: auto;
+              }
+          
               
