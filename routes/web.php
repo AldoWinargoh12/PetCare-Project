@@ -11,13 +11,34 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes(['verify' => true]);
+
+Route::get('/petregister', function () {
+    return view('petregister');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+
+
+Route::get('profile', function () {
+    // Only verified users may enter...
+    Auth::routes();
+    
+    
+    
+    
+    Route::get('/home', 'HomeController@index')->name('home');
+})->middleware('verified');
+
+Route::get('/profilePost/create','profilePostController@create')->name('profilePost.create');
+Route::get('/profilePost/store','profilePostController@store')->name('profilePost.store');
+Route::get('/viewPost','profilePostController@index')->name('viewPost');
+Route::get('/profilePost/view/{id}','profilePostController@show')->name('profilePost.view');
+
+
+
+
+
+//start of advertisement controller
 
 Route::get('/about', function () {
     return view('about');
@@ -27,12 +48,8 @@ Route::get('/rules', function () {
     return view('rules');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
-
 Route::get('/advertisement', function () {
-    return view('showAd');
+    return view('pageTemplate.showAd');
 });
 
 Route::get('/createAdvertisement', function () {
@@ -49,4 +66,6 @@ Route::resource('advertisements', 'AdvertisementController');
 Route::get('/live_search', 'LiveSearch@index');
 Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action');
 
+Route::get('/matchmaking', 'matchmaking@index');
+Route::get('/matchmaking/action', 'matchmaking@action')->name('matchmaking.action');
 
