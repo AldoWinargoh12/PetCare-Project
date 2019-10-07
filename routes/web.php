@@ -11,25 +11,32 @@
 |
 */
 
+Auth::routes(['verify' => true]);
 
 Route::get('/petregister', function () {
     return view('petregister');
 });
 
 
-Auth::routes(['verify'=> true]);
 
-Auth::routes();
+Route::get('profile', function () {
+    // Only verified users may enter...
+    Auth::routes();
+    
+    
+    
+    
+    Route::get('/home', 'HomeController@index')->name('home');
+})->middleware('verified');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profilePost/create','profilePostController@create')->name('profilePost.create');
 Route::get('/profilePost/store','profilePostController@store')->name('profilePost.store');
 Route::get('/viewPost','profilePostController@index')->name('viewPost');
 Route::get('/profilePost/view/{id}','profilePostController@show')->name('profilePost.view');
+
+
+
+
 
 //start of advertisement controller
 
