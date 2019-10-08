@@ -11,13 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes(['verify' => true]);
 
-Route::get('/home', function () {
-    return view('home');
-});
+
+
+
+
+//Route::get('profile', function () {
+    // Only verified users may enter...
+Auth::routes();
+Route::resource('posts','PostController'); 
+    
+    
+    
+Route::get('/home', 'HomeController@index')->name('home');
+//})->middleware('verified');
+Route::resource('registerpets','RegisterpetController');
+
+
+
+//start of advertisement controller
 
 Route::get('/about', function () {
     return view('about');
@@ -27,12 +40,8 @@ Route::get('/rules', function () {
     return view('rules');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
-
 Route::get('/advertisement', function () {
-    return view('showAd');
+    return view('pageTemplate.showAd');
 });
 
 Route::get('/createAdvertisement', function () {
@@ -53,4 +62,6 @@ Route::get('/matchmaking', 'matchmaking@index');
 Route::get('/matchmaking/action', 'matchmaking@action')->name('matchmaking.action');
 
 
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');

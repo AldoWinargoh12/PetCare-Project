@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<h1>Registration</h1>
+<div id=createAd>
     <div class="container">
         <div class="register-row">
             <div class="registration-main">
-                <div class="card card-register">
                     <div class="register-body">
-                        <h5 class="registration title">{{ __('Register') }}</h5>
                         <form class ="form-register" method="POST" action="{{ route('register') }}">
                             @csrf
                     <!-- first name and last name  -->
@@ -70,9 +70,9 @@
 
                     </div>
                 </div>
-            </div> 
         </div> 
     </div>
+</div>
                 
           
 @endsection
