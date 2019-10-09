@@ -4,62 +4,53 @@
 
   <div >
     <div >
-      View Pet Information
-      <a class="btn btn-primary" href="{{ route('registerpets.index') }}"> Back</a>
+      <h1>View Pet Information</h1>
     </div>
     <div>
-      <div>
-        <div>
-          <div>
-            <strong>Pet Name</strong>
-              {{ $registerpet->pet_name }}
-          </div>
-        </div>
-        <div>
-          <div>
-            <strong>Species:</strong>
-              {{ $registerpet->species }}
-          </div>
-        </div>
-        <div>
-          <div>
-            <strong>Breed:</strong>
-              {{ $registerpet->breed }}
-          </div>
-        </div>
-        <div>
-          <div>
-            <strong>Gender:</strong>
-              {{ $registerpet->gender }}
-          </div>
-        </div>
-        <div>
-          <div>
-            <strong>Size:</strong>
-              {{ $registerpet->size }}
-          </div>
-        </div>
-        <div>
-          <div>
-            <strong>Microchip Number:</strong>
-              {{ $registerpet->microchip_number }}
-          </div>
-        </div>
-        <div>
-          <div>
-            <strong>Rabies Tag Number :</strong>
-              {{ $registerpet->rabies_number }}
-          </div>
-        </div>
-        div>
-          <div>
-            <strong>Additional Notes :</strong>
-              {{ $registerpet->additional_notes }}
-          </div>
-        </div>
 
-      </div>
-      
-    </div>
-  </div>
+<div id=createAd>  
+  <table class="table table-striped table-light table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Label</th>
+                        <th scope="col">Content</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="col">Pet Name</th>
+                        <td>{{ $registerpet->pet_name }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Species</th>
+                        <td>{{ $registerpet->species }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Breed</th>
+                        <td>{{ $registerpet->breed }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Gender</th>
+                        <td>{{ $registerpet->gender }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Size</th>
+                        <td>{{ $registerpet->size }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Microchip Number</th>
+                        <td>{{ $registerpet->microchip_number }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Rabies Tag No</th>
+                        <td>{{ $registerpet->rabies_number }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Additional Notes</th>
+                        <td>{{ $registerpet->additional_notes }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-primary btn-block" href="{{ route('registerpets.index') }}"> Back</a>
+</div>
 @endsection
