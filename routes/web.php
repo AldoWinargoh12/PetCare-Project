@@ -11,13 +11,27 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/petregister', function () {
+    return view('petregister');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+
+Auth::routes(['verify'=> true]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profilePost/create','profilePostController@create')->name('profilePost.create');
+Route::get('/profilePost/store','profilePostController@store')->name('profilePost.store');
+Route::get('/viewPost','profilePostController@index')->name('viewPost');
+Route::get('/profilePost/view/{id}','profilePostController@show')->name('profilePost.view');
+
+//start of advertisement controller
 
 Route::get('/about', function () {
     return view('about');
@@ -27,12 +41,8 @@ Route::get('/rules', function () {
     return view('rules');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
-
 Route::get('/advertisement', function () {
-    return view('showAd');
+    return view('pageTemplate.showAd');
 });
 
 Route::get('/createAdvertisement', function () {
@@ -51,6 +61,4 @@ Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action
 
 Route::get('/matchmaking', 'matchmaking@index');
 Route::get('/matchmaking/action', 'matchmaking@action')->name('matchmaking.action');
-
-
 

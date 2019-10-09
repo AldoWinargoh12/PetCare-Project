@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
 <h1>View your Ads</h1>
@@ -10,7 +10,12 @@
         </nav>
 
 <p>list of ads shown here
-    </p>
+ </p>
+
+       
+
+       
+
 @foreach($advertisements as $row)
     <div id=AdContainer>
         <div id=AdImage>
@@ -34,7 +39,9 @@
         </div>
 
     </div>
+
 @endforeach
+
 
 
 

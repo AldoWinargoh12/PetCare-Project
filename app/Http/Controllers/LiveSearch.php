@@ -22,7 +22,7 @@ class LiveSearch extends Controller
       {
        $data = DB::table('advertisements')
          ->where('title', 'like', '%'.$query.'%')
-         ->orWhere('price', 'like', '%'.$query.'%')
+         ->Where('price', 'like', '%'.$query.'%')
          ->orWhere('location', 'like', '%'.$query.'%')
          ->orWhere('description', 'like', '%'.$query.'%')
          ->orderBy('id')

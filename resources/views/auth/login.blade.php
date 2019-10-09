@@ -2,9 +2,8 @@
 @extends('layouts.app')
 
 @section('content')
-  
-          
-            <h5 class="card-title text-center">{{ __('Login') }}</h5>
+  <h1>Login</h1>
+<div id=createAd>        
               <form class="form-signin" method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="form-label-group">
@@ -41,7 +40,7 @@
                     </a>
                   @endif
               </form>
-           
+</div>         
     
   
   
