@@ -11,26 +11,24 @@
 |
 */
 
-
-Route::get('/petregister', function () {
-    return view('petregister');
-});
+Auth::routes(['verify' => true]);
 
 
-Auth::routes(['verify'=> true]);
 
+
+
+//Route::get('profile', function () {
+    // Only verified users may enter...
 Auth::routes();
-
+Route::resource('posts','PostController'); 
+    
+    
+    
 Route::get('/home', 'HomeController@index')->name('home');
+//})->middleware('verified');
+Route::resource('registerpets','RegisterpetController');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/profilePost/create','profilePostController@create')->name('profilePost.create');
-Route::get('/profilePost/store','profilePostController@store')->name('profilePost.store');
-Route::get('/viewPost','profilePostController@index')->name('viewPost');
-Route::get('/profilePost/view/{id}','profilePostController@show')->name('profilePost.view');
-
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 //start of advertisement controller
 
 Route::get('/about', function () {
@@ -62,3 +60,7 @@ Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action
 Route::get('/matchmaking', 'matchmaking@index');
 Route::get('/matchmaking/action', 'matchmaking@action')->name('matchmaking.action');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
