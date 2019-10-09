@@ -33,7 +33,6 @@
         <button class="button buttonNav" onclick="window.location='{{ url('home') }}'">Home</button>
         <button class="button buttonNav" onclick="window.location='{{ url('about') }}'">About</button>
         <button class="button buttonNav" onclick="window.location='{{ url('rules') }}'">Rules</button>
-        <button class="button buttonNav" onclick="window.location='{{ url('registerpets') }}'">Profile</button>
         <button class="button buttonNav" onclick="window.location='{{ url('advertisements') }}'">advertisement</button></button>
         <button class="button buttonNav" onclick="window.location='{{ url('register') }}'">Register</button>
         <button class="button buttonNav" onclick="window.location='{{ url('login') }}'">Login</button>
