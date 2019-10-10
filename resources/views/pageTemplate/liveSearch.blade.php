@@ -1,14 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Search for your Ads</h1>
-
-<nav id=adView>
-        <button class="button buttonAdSelect" onclick="window.location='{{ url('advertisements') }}'">View Advertisement</button>
-        <button class="button buttonAdSelect" onclick="window.location='{{ url('createAdvertisement') }}'">Create Advertisement</button>
-        <button class="button buttonAdSelect" onclick="window.location='{{ url('live_search') }}'">Live Search</button>
-        </nav>
-
 <body>
   <br />
   <div class="container box">

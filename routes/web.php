@@ -44,6 +44,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
 Route::get('/rules', function () {
     return view('rules');
 });
@@ -60,6 +64,9 @@ Route::get('/search', function () {
     return view('pageTemplate.liveSearch');
 });
 
+Route::get('/editcredentials', function () {
+    return view('pageTemplate.editcredentials');
+});
 
 Route::resource('advertisements', 'AdvertisementController');
 

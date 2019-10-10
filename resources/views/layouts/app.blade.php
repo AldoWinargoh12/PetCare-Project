@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}" class="full-height">
+<html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="<?php echo asset('css/petcare.css')?>" type="text/css"> 
 
@@ -22,10 +23,13 @@
         <!-- Styles -->
     </head>
     <body>
+    <div id="page-container">
     
         <!--Main Navigation-->
     <header>
-      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+   
+    <div class="overlay"></div>
+      <nav class="navbar navbar-expand-md navbar-light bg-faded">
         <div class="container">
           <a class="navbar-brand">Petcare Project</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,8 +40,15 @@
               <li class="nav-item active">
                 <a class="nav-link" href="#" onclick="window.location='{{ url('home') }}'">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#" onclick="window.location='{{ url('home') }}'">Advertisement</a>
+              <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  Advertisement
+                </a>
+                <div class="dropdown-menu sm-menu dropdown-content">
+                  <a class="dropdown-item" href="#" onclick="window.location='{{ url('advertisements') }}'">View Advertisement</a>
+                  <a class="dropdown-item" href="#" onclick="window.location='{{ url('createAdvertisement') }}'">Create Advertisement</a>
+                  <a class="dropdown-item" href="#" onclick="window.location='{{ url('live_search') }}'">Search Advertisement</a>
+                </div>
               </li>
               <li class="nav-item active">
                 <a class="nav-link " href="#" onclick="window.location='{{ url('rules') }}'">Rules</a>
@@ -45,56 +56,33 @@
               <li class="nav-item active">
                 <a class="nav-link" href="#" onclick="window.location='{{ url('about') }}'">About</a>
               </li>
-            </ul>
-            <ul class="nav navbar-nav ml-auto">
               <li class="nav-item active">
                 <a class="nav-link disabled" href="#">Register</a>
               </li>
-            </ul>
+            </ul>   
+            <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search..." aria-label="Search">
+                  </div>
+                </form>
           </div>
         </div>
       </nav>
     </header>
-
-    <main id=content>
-        <div id=sidecontent>
-            <h1 id=sidebar>Information Cluster</h1>
-            <h2 id=sidebar>Search this Site</h2>
-        </div>
-
-        <div id=maincontent>
-        <div id=content>
+            <div class="bg">
             @yield('content')
-        </div>
-        </div>
-
-    </main>
-
-        <footer>
-    <p class="lead">&copy; PetCare Project</p>
-	</footer>
-    </div>
-    
-    <!-- Plugins -->
-
-<!--   Core JS Files   -->
-<script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
-<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
-<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-
-<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-<script src="../assets/js/plugins/bootstrap-switch.js"></script>
-
-<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
-
-<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker --><script src="../assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
-
-<!--  Google Maps Plugin    -->
-<script  src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+            </div>
 
 
-<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
-<script src="../assets/js/now-ui-kit.js?v=1.2.0" type="text/javascript"></script>
+      <footer id="footer" class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p id="footertext">&copy; PetCare Project</p>
+        <p id="footertext">New to PetCare Project?<a href="../../"> Visit the homepage</a> or read about our <a href="../../rules/">rules</a>.</p>
+      </div>
+    </footer>
+</div>
     </body>
 </html>
