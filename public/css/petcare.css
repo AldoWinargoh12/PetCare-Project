@@ -1,78 +1,96 @@
-body, html {
+    body, html {
     height: 100%;
     background: url("/storage/img/backgrounddog.jpeg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
-  }
-  
-  .bg { 
+    }
 
-  
+    .bg { 
+
+
     /* Full height */
     height: 100%; 
-  
+
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+    }
 
-  #footer {
+    #footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 2.5rem;            /* Footer height */
-  }
+    }
 
-.navbar{ background:#e3f2fd;}
+    .navbar{ 
+    background:#e3f2fd;
+    }
 
-.nav-link , .navbar-brand{ color: #ffa600; cursor: pointer;}
+    .nav-link , .navbar-brand{ 
+    color: #ffa600; cursor: pointer;
+    }
 
-.nav-link{ margin-right: 1em !important;}
+    .nav-link{ 
+    margin-right: 1em !important;
+    }
 
-.nav-link:hover{ background: #ffffff; color: #ffffff; }
+    .nav-link:hover{ 
+    background: #ffffff; color: #ffffff; 
+    }
 
-.navbar-collapse{ justify-content: flex-end;}
+    .navbar-collapse{ 
+    justify-content: flex-end;
+    }
 
-.navbar-toggler{  background:#ffffff !important;}
+    .navbar-toggler{  
+    background:#ffffff !important;
+    }
 
-.dropdown-content a:hover {background-color: rgb(196, 190, 190);}
+    .dropdown-content a:hover {
+    background-color: rgb(196, 190, 190);
+    }
 
-.dropdown:hover .dropdown-content {display: block;}
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-  
-  .dropdown {
+    .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+    }
+
+    .dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+    }
+
+    .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
-  
-  .dropdown-content a {
+    }
+
+    .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  #header2 {
+    }
+
+    #header2 {
     color: #973f0c;
     font-family: arial;
     font-size: 40px;
-  }
+    }
 
-  #text2 {
+    #text2 {
     color: #973f0c;
     font-family: arial;
     font-size: 20px;
@@ -82,39 +100,112 @@ body, html {
     margin-right: -50%;
     transform: translate(50%, -20%) 
 
-  }
+    }
 
-  .adtext {
-      padding-left: 1000px;
-  }
+    .adtext {
+        padding-left: 1000px;
+    }
 
-  #footertext {
-   color:#ff995e;
-  }
+    #footertext {
+    color:#ff995e;
+    }
 
-  #page-container {
+    #page-container {
     position: relative;
     min-height: 120vh;
-  }
-  
-  #homebutton {
-      color:#973f0c;
-      transform: translate(0%, -100%) 
-  }
+    }
 
-  p {
-      text-align: center;
-  }
+    #homebutton {
+        color:#973f0c;
+        transform: translate(0%, -100%) 
+    }
 
-  #abouttext {
-      text-align: left;
-  }
+    p {
+        text-align: center;
+    }
 
-  #abouttextr {
+    #abouttext {
+        text-align: left;
+    }
+
+    #abouttextr {
     text-align: right;
-}
+    }
 
-#rule2{
+    #rule2{
     padding-left: 280px;
-}
+    }
 
+    table{
+    width: 70%;  
+    text-align: center;
+    padding-top: 10px;
+    }
+
+    table.center {
+        margin-left:15%; 
+        margin-right:15%;
+    }
+
+    tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: rgb(255, 255, 255);
+    }
+
+    th {
+        background-color: rgb(34, 108, 151);
+        color: white;
+        text-align: center;
+        height: 50px;
+        margin:auto;
+      }
+    
+    th,td {
+        border: 1px solid #ddd;
+        padding: 4px;
+        width: 10px;
+    }
+
+    td#cell {
+        text-align: left;
+        width: 30%;
+    }
+
+    td#cell2 {
+        text-align: center;
+        width: 70%;
+    }
+    td#cell3 {
+        text-align: center;
+        width: 20%;
+    }
+
+    td#cell4 {
+        text-align: left;
+        width: 80%;
+        padding-left: 10px;
+    }
+
+    #indexpetsbtn {
+    margin: auto;
+    top: 60%;
+    }
+
+    .wrapper {
+    text-align: center;
+    }
+
+    form#registerandloginform {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+    }
+
+    #loginbox {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+    }

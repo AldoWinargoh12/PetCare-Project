@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="<?php echo asset('css/petcare.css')?>" type="text/css"> 
+        <link rel="stylesheet" href="<?php echo asset('css/login.css')?>" type="text/css"> 
+        <link rel="stylesheet" href="<?php echo asset('css/register.css')?>" type="text/css"> 
 
         <link rel="stylesheet" href="/css/bootstrap.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -31,15 +33,13 @@
     <div class="overlay"></div>
       <nav class="navbar navbar-expand-md navbar-light bg-faded">
         <div class="container">
-          <a class="navbar-brand">Petcare Project</a>
+        <img style="width:125px; padding-right:20px;" id=logo src="/storage/img/petcare_logo.png" href="#" onclick="window.location='{{ url('homepage') }}'">
+          <a class="navbar-brand" href="#" onclick="window.location='{{ url('homepage') }}'">Petcare Project<span class="sr-only">(current)</span></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#" onclick="window.location='{{ url('home') }}'">Home <span class="sr-only">(current)</span></a>
-              </li>
               <li class="nav-item active dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                   Advertisement
@@ -50,14 +50,25 @@
                   <a class="dropdown-item" href="#" onclick="window.location='{{ url('live_search') }}'">Search Advertisement</a>
                 </div>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link " href="#" onclick="window.location='{{ url('rules') }}'">Rules</a>
+              <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  Profile
+                </a>
+                <div class="dropdown-menu sm-menu dropdown-content">
+                  <a class="dropdown-item" href="#" onclick="window.location='{{ url('registerpets') }}'">Pet List</a>
+                  <a class="dropdown-item" href="#" onclick="window.location='{{ url('posts') }}'">Comments</a>
+                </div>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="#" onclick="window.location='{{ url('about') }}'">About</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link disabled" href="#">Register</a>
+                <a class="nav-link " href="#" onclick="window.location='{{ url('register') }}'">Register</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link " href="#" onclick="window.location='{{ url('login') }}'">Login</a>
+              </li><li class="nav-item active">
+                <a class="nav-link " href="#" onclick="window.location='{{ url('logout') }}'">Logout</a>
               </li>
             </ul>   
             <form class="form-inline">

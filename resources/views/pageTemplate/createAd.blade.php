@@ -29,7 +29,7 @@
                 <div class="row mt-5">
                   <!--Grid column-->
                   <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
-                    <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Create Ad right now! </h1>
+                    <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Create your Ad right now! </h1>
                     <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
                     <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">Put an advertisement for someone to take care fo your pet when you are away. When you go travelling,
                     business trip, or even too lazy too take care of your pet.
