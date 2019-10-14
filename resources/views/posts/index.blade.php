@@ -1,11 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
-<a class="btn btn-primary" style="margin-left: 20px; margin-top: 20px;" href="{{ route('posts.create') }}"> Create New User Comment</a>
+<h1 class="h1-responsive font-weight-bold wow text-center" data-wow-delay="0.3s">Your Comment</h1>
 </br>
-</br>
-  
     <div >
     @if(session()->get('success'))
       <div class="alert alert-success">
@@ -17,24 +14,25 @@
 
 @foreach($posts as $post)
 
-<div class="card-columns">
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">  
-        <img class="card-img-top"  src="/storage/img/petcare_ad.png"> 
+<div class="card-columns d-inline align-middle" id="adcol">
+<div class="card mb-3" style="width: 680px;">
+<div class="row no-gutters">
+<div class="col-md-4 align-self-center" >  
+    <img class="card-img-top" id="adpic"  src="/storage/img/petcare_ad.png"> 
       </div>
         <div class="col-md-8">
             <div class="card-body">  
-            <h3 class="card-title">{{$post['title']}}</h5>  
-            <p class="card-text">Post Id : {{$post->id}}</p>  
-            <p class="card-text"><a href="{{ route('posts.show',$post->id) }}">Expand Post</a></p>
-            <p class="card-text">{{$post->body}}</p>
+            <h3 id="adTitle" class="card-title">{{$post['title']}}</h5>  
+            <p id="adBody" class="card-text">Post Id : {{$post->id}}</p>  
+            <p id="adBody" class="card-text"><a href="{{ route('posts.show',$post->id) }}">Expand Post</a></p>
+            <p id="adBody" class="card-text">{{$post->body}}</p>
             </div>  
         </div>
     </div>
   </div>
 </div>
-
+</br>
 @endforeach
-  
+<a class="btn btn-primary" style="margin-left: 20px; margin-top: 20px;" href="{{ route('posts.create') }}"> Create New User Comment</a>
+
 @endsection

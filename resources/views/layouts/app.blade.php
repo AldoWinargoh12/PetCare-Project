@@ -82,9 +82,13 @@
     </header>
             <div class="bg">
             @yield('content')
-            </div>
+            
 
-
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
       <footer id="footer" class="text-muted">
       <div class="container">
         <p class="float-right">
@@ -94,6 +98,7 @@
         <p id="footertext">New to PetCare Project?<a href="../../"> Visit the homepage</a> or read about our <a href="../../rules/">rules</a>.</p>
       </div>
     </footer>
+    </div>
 </div>
     </body>
 </html>

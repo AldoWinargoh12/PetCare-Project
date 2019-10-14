@@ -21,7 +21,7 @@
     <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="/storage/img/travel.jpg"></div>
       <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
         <h2 class="font-weight-light">When you travelling,</h2>
-        <p id="abouttext" class="font-italic mb-4">Do not worry when you travel, just put an Ad and we will find a pet taker to take care of your beloved pet.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm" onclick="window.location='{{ url('createAdvertisement') }}'">Learn More</a>
+        <p id="abouttext" class="font-italic mb-4">Do not worry when you travel, just put an Ad and we will find a pet taker to take care of your beloved pet.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm" onclick="window.location='{{ url('createAdvertisement') }}'">Create an Ad Now!!</a>
       </div>
      
     </div>

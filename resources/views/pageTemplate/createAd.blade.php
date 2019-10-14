@@ -34,7 +34,7 @@
                     <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">Put an advertisement for someone to take care fo your pet when you are away. When you go travelling,
                     business trip, or even too lazy too take care of your pet.
                     </h6>
-                    <a class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s" onclick="window.location='{{ url('rules') }}'">Learn more</a>
+                    <a class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s" onclick="window.location='{{ url('rules') }}'">Our Rule</a>
                   </div>
                   <!--Grid column-->
                   <!--Grid column-->
@@ -54,12 +54,12 @@
                         <!--Body-->
                         <div class="md-form">
                           <i class="fas fa-user prefix white-text active"></i>
-                          <label for="form3" class="active">Your Pet:</label>
+                          <label for="form3" class="active">Your Advertisement Title:</label>
                           <input type="text" name="title" id="form3" class="white-text form-control" placeholder="Enter your title...">
                         </div>
                         <div class="md-form">
                           <i class="fas fa-envelope prefix white-text active"></i>
-                          <label for="form2" class="active">Price:</label>
+                          <label for="form2" class="active">Price (/day):</label>
                           <input type="text" name="price" id="form2" class="white-text form-control" placeholder="Enter your price...">
                         </div>
                         <div class="md-form">

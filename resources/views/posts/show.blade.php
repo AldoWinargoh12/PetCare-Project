@@ -2,7 +2,7 @@
 
 @section('content')
 
-<title>Your Comment</title>
+<h1 class="h1-responsive font-weight-bold wow text-center" data-wow-delay="0.3s">Comment Information</h1>
 
 </br>
     <div class="row row-no-gutters">

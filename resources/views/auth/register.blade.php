@@ -5,7 +5,7 @@
           
 <div class="view">
 <!-- Default form register -->
-<form id="registerandloginform" class="text-center border border-light p-5" method="post" action="{{url('register')}}">
+<form id="registerandloginform" class="text-center p-5" method="post" action="{{url('register')}}">
 {{csrf_field()}}
 
 <p class="h4 mb-4">Sign up</p>

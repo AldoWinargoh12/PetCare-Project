@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<h1 class="h1-responsive font-weight-bold wow text-center" data-wow-delay="0.3s">Your Pet List</h1>
 </br>
 <div class="row row-no-gutters">
             <table class="center" class="table table-striped table-light">

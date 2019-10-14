@@ -209,3 +209,32 @@
         margin-right: auto;
         width: 600px;
     }
+
+    #adcol {
+        margin-left: auto;
+        margin-right: auto; 
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #adpic {
+        max-block-size: 50%;
+        padding-left: 10px;
+        padding-right: 3px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    #adTitle {
+        text-align: center;
+    }
+
+    #adBody {
+        text-align: left;
+    }
+
+    form#registerpet {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+    }
