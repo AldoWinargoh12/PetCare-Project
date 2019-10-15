@@ -17,6 +17,7 @@ class CreateAdvertisementsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->double('price');
+            $table->double('duration');
             $table->string('location');
             $table->string('description');
             $table->timestamps();

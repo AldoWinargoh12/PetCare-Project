@@ -2,55 +2,53 @@
 
 @section('content')
 
-  <div >
-    <div >
-      <h1>View Pet Information</h1>
-    </div>
-    <div>
+<title>Pet Information</title>
 
-<div id=createAd>  
-  <table class="table table-striped table-light table-bordered">
-                <thead class="thead-dark">
+</br>
+    <div class="row row-no-gutters">
+            <table class="center" class="table table-striped table-light">
                     <tr>
-                        <th scope="col">Label</th>
-                        <th scope="col">Content</th>
+                        <th id="cell">Label</th>
+                        <th>Content</th>
                     </tr>
-                </thead>
                 <tbody>
                     <tr>
-                        <th scope="col">Pet Name</th>
-                        <td>{{ $registerpet->pet_name }}</td>
+                        <td id="cell">Pet Name</td>
+                        <td id="cell2">{{ $registerpet->pet_name }}</td>
                     </tr>
                     <tr>
-                        <th scope="col">Species</th>
-                        <td>{{ $registerpet->species }}</td>
+                        <td id="cell">Species</td>
+                        <td id="cell2">{{ $registerpet->species }}</td>
                     </tr>
                     <tr>
-                        <th scope="col">Breed</th>
-                        <td>{{ $registerpet->breed }}</td>
+                        <td id="cell">Breed</td>
+                        <td id="cell2">{{ $registerpet->breed }}</td>
                     </tr>
                     <tr>
-                        <th scope="col">Gender</th>
-                        <td>{{ $registerpet->gender }}</td>
+                        <td id="cell">Gender</td>
+                        <td id="cell2">{{ $registerpet->gender }}</td>
                     </tr>
                     <tr>
-                        <th scope="col">Size</th>
-                        <td>{{ $registerpet->size }}</td>
+                        <td id="cell">Size</td>
+                        <td id="cell2">{{ $registerpet->size }}</td>
                     </tr>
                     <tr>
-                        <th scope="col">Microchip Number</th>
-                        <td>{{ $registerpet->microchip_number }}</td>
+                        <td id="cell">Microchip Number</td>
+                        <td id="cell2">{{ $registerpet->microchip_number }}</td>
                     </tr>
                     <tr>
-                        <th scope="col">Rabies Tag No</th>
-                        <td>{{ $registerpet->rabies_number }}</td>
+                        <td id="cell">Rabies Tag No</td>
+                        <td id="cell2">{{ $registerpet->rabies_number }}</td>
                     </tr>
                     <tr>
-                        <th scope="col">Additional Notes</th>
-                        <td>{{ $registerpet->additional_notes }}</td>
+                        <td id="cell">Additional Notes</td>
+                        <td id="cell2">{{ $registerpet->additional_notes }}</td>
                     </tr>
                 </tbody>
             </table>
-            <a class="btn btn-primary btn-block" href="{{ route('registerpets.index') }}"> Back</a>
 </div>
+</br>
+            <div class="wrapper">
+            <button id="indexpetsbtn" class="btn btn-primary" onclick="window.location='{{ url('registerpets') }}'">Back</button></td>
+            </div>
 @endsection

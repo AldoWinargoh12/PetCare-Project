@@ -2,33 +2,25 @@
 
 @section('content')
 
+<h1 class="h1-responsive font-weight-bold wow text-center" data-wow-delay="0.3s">Comment Information</h1>
 
-  <div >
-    <div >
-      <h1>Comment Information</h1>
-
-    </div>
-    <div>
-
-<div id=createAd>  
-  <table class="table table-striped table-light table-bordered">
-                <thead class="thead-dark">
+</br>
+    <div class="row row-no-gutters">
+            <table class="center" class="table table-striped table-light">
                     <tr>
-                        <th scope="col">Label</th>
-                        <th scope="col">Content</th>
+                        <th id="cell3">Title</th>
+                        <th>Comment Description</th>
                     </tr>
-                </thead>
                 <tbody>
                     <tr>
-                        <th scope="col">Title</th>
-                        <td>{{ $post->title }}</td>
-                    </tr>
-                    <tr>
-                        <th scope="col">Comment</th>
-                        <td>{{ $post->body }}</td>
+                        <td id="cell3">{{ $post->title }}</td>
+                        <td id="cell4">{{ $post->body }}</td>
                     </tr>
                 </tbody>
             </table>
-            <a class="btn btn-primary btn-block" href="{{ route('posts.index') }}"> Back</a>
 </div>
+</br>
+            <div class="wrapper">
+            <button id="indexpetsbtn" class="btn btn-primary" onclick="window.location='{{ url('posts') }}'">Back</button></td>
+            </div>
 @endsection

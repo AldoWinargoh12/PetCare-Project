@@ -1,70 +1,90 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Register your Pet</h1>
-
-<div id=createAd>  
-  <div class="card uper">
-    <div class="card-header">
-      Please Register Your Animal Friend
-    </div>
-    <div class="card-body">
-      @if ($errors->any())
-        <div class="alert alert-danger">
-          <ul>
-              @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-              @endforeach
-          </ul>
-        </div><br />
-      @endif
-        <form method="post" action="{{ route('registerpets.store') }}">
-        @csrf
-            <div class="form-group">
-                
-                <label for="pet-name">Pet Name</label>
-                <input type="text" class="form-control" name="pet_name" id="pet_name" />
+<h1 class="h1-responsive font-weight-bold wow text-center" data-wow-delay="0.3s">Pet Registration</h1>
+  <div class="view">
+    <!-- Default form register -->
+    <form id="registerpet" method="post" action="{{ route('registerpets.store') }}">
+    {{csrf_field()}}
+      <div class="form-group">
+        <div class="card wow fadeInRight" data-wow-delay="0.3s">
+          <div class="card-body">
+            <!--Header-->
+            <div class="text-center">
+            <h3 class="white-text">
+              <i class="fas fa-user white-text"></i>Register Your Pet</h3>
+                <div >
+                  @if ($errors->any())
+                    <div >
+                      <ul>
+                          @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                          @endforeach
+                      </ul>
+                    </div>
+                  </br>
+                  @endif
+                  <hr class="hr-light">
+                </div>
             </div>
-            <div class="form-group">
-                
-                <label for="species">Species</label>
-                <input type="text" class="form-control" name="species" id="species" />
+            </br>
+            <!--Body-->
+            <!-- PetName -->
+            <div class="md-form">
+              <i class="fas fa-envelope prefix white-text active"></i>
+              <input type="text" class="form-control" name="pet_name" id="pet_name" placeholder="Pet Name">
             </div>
-            <div class="form-group">
-                
-                <label for="breed">Breed</label>
-                <input type="text" class="form-control" name="breed" id="breed" />
+            </br>
+            <!-- Species -->
+            <div class="md-form">
+              <i class="fas fa-envelope prefix white-text active"></i>
+              <input type="text" class="form-control" name="species" id="species" placeholder="Species">
             </div>
-            <div class="form-group">
-                
-                <label for="gender">Gender</label>
-                <input type="text" class="form-control" name="gender" id="gender" />
+            </br>
+            <!-- Breed -->
+            <div class="md-form">
+              <i class="fas fa-envelope prefix white-text active"></i>
+              <input type="text" class="form-control" name="breed" id="breed" placeholder="Breed">
             </div>
-            <div class="form-group">
-                
-                <label for="size">Pet Size</label>
-                <input type="text" class="form-control" name="size" id="size" />
+            </br>
+            <!-- Gender -->
+            <div class="md-form">
+              <i class="fas fa-envelope prefix white-text active"></i>
+              <input type="text" class="form-control" name="gender" id="gender" placeholder="Gender">
             </div>
-            <div class="form-group">
-                
-                <label for="microchip_number">Pet Microchip Number</label>
-                <input type="text" class="form-control" name="microchip_number" id="microchip_number" />
+            </br>
+            <!-- PetSize -->
+            <div class="md-form">
+              <i class="fas fa-envelope prefix white-text active"></i>
+              <input type="text" class="form-control" name="size" id="size" placeholder="Pet Size">
             </div>
-            <div class="form-group">
-                
-                <label for="rabies_number">Pet Rabies Number</label>
-                <input type="text" class="form-control" name="rabies_number" id="rabies_number" />
+            </br>
+            <!-- PetMicroChipNumber -->
+            <div class="md-form">
+              <i class="fas fa-envelope prefix white-text active"></i>
+              <input type="text" class="form-control" name="microchip_number" id="microchip_number" placeholder="Pet Microchip Number">
             </div>
-            
-
-            <div class="form-group">
-                <label for="additional_notes">Additional Notes</label>
-                <textarea name="additional_notes" id="additional_notes" class="form-control"></textarea>
-                
+            </br>
+            <!-- PetRabiesNumber -->
+            <div class="md-form">
+              <i class="fas fa-envelope prefix white-text active"></i>
+              <input type="text" class="form-control" name="rabies_number" id="rabies_number" placeholder="Pet Rabies Number">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
+            </br>
+            <!-- AdditionalNotes -->
+            <div class="md-form">
+              <i class="fas fa-envelope prefix white-text active"></i>
+              <label for="additional_notes" class="active">Additional Notes:</label>
+              <textarea type="text" name="additional_notes" id="additional_notes" class="form-control"></textarea>
+            </div>
+            </br>
+            <div class="text-center mt-4">
+              <button type="submit" class="btn btn-indigo">Create Advertisement</button>
+            </div>
+        </div>
+      </div>
+      </div>
+    </form>
+    <!--/.Form-->
   </div>
- </div> 
 @endsection

@@ -17,6 +17,7 @@ class AdvertisementController extends Controller
         $advertisements = Advertisement::all()->toArray();
         return view('pageTemplate.showAd', compact('advertisements'));
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -40,6 +41,7 @@ class AdvertisementController extends Controller
         'title'       => 'required',
         'price'       => 'required',
         'location'    => 'required',
+        'duration'    => 'required',
         'description' => 'required'
         ]);
 
@@ -47,6 +49,7 @@ class AdvertisementController extends Controller
             'title'        =>   $request->get('title'),
             'price'        =>   $request->get('price'),
             'location'     =>   $request->get('location'),
+            'duration'     =>   $request->get('duration'),
             'description'  =>   $request->get('description')
         ]);
         $advertisements->save();
