@@ -2,10 +2,21 @@
 
 @section('content')
   
-  <div >
-    <div>
-     <h1> Create User Comments </h1>
-    </div>
+</br>
+<div class="view">
+  <!-- Default form register -->
+  <form id="registerandloginform" method="post" action="{{ route('posts.store') }}">
+  {{csrf_field()}}
+
+  <div class="form-group">
+    <div class="card wow fadeInRight" data-wow-delay="0.3s">
+      <div class="card-body">
+        <!--Header-->
+        <div class="text-center">
+          <h3 class="white-text">
+            <i class="fas fa-user white-text"></i>Post Your Comment</h3>
+          <hr class="hr-light">
+        </div>
     <div >
       @if ($errors->any())
         <div >
@@ -14,24 +25,30 @@
                 <li>{{ $error }}</li>
               @endforeach
           </ul>
-        </div><br />
+        </div>
+      </br>
       @endif
-      <div id=createAd>
-          <form method="post" action="{{ route('posts.store') }}">
-          {{csrf_field()}}
-          <div class="form-group">
-            <input type="text" name="title" id="title" class="form-control" placeholder="Enter Title Of Comment" />
-          </div>
-          <div class="form-group">
-            <textarea id="body" type="text" name="body" class="form-control" placeholder="Enter Description of Ad" ></textarea>
-          </div>
-          <div class="form-group">
-            <input type="submit" class="btn btn-primary" />
-          </div>
-          </form>
-          </div>
-    </div>
-  </div>
-
+      <!-- Comment Title -->
+      <div class="md-form">
+        <i class="fas fa-user prefix white-text active"></i>
+        <label for="form3" class="active">Your Comment Title:</label>
+        <input type="text" name="title" id="title" class="white-text form-control" placeholder="Comment Title">
+      </div>
+      </br>
+      <!-- Password -->
+      <div class="md-form">
+      <i class="fas fa-envelope prefix white-text active"></i>
+        <label for="form4">Description:</label>
+        <textarea type="text" name="body" id="body" class="white-text form-control"  placeholder="Desciption"></textarea>
+      </div>
+      <div class="text-center mt-4">
+      <button class="btn btn-primary my-4" type="submit">Submit</button>
+      </div>
+  </form>
+<!-- Default form register -->
+</div>
+</div>
+</div>
+</div>
   
 @endsection

@@ -1,368 +1,240 @@
-body{
-    width:1200px;
-    margin: auto;
-    background-color:#fffdd0 ;
-    
-}
+    body, html {
+    height: 100%;
+    background: url("/storage/img/backgrounddog.jpeg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
-html{
-    width:1200px;
-    margin: auto;
-}
-
-header{
-    float:left;
-    width:1200px;
-    overflow:hidden;
-    height:10%;
-    max-height:200px;
-    background-color:#173f5f;
-}
-
-main#content{
-    float:left;
-    text-align:center;
-    min-height:300px;
-    margin-top:0px;
-    width:1200px;
-    overflow:hidden;
-    height:20%;
-    background-color:#20639B;
     }
 
-    div#content{
-        padding-top:50px;
-        margin-top:0px;
-        text-align:center;
-        margin-left:25px;
-        width:850px;
-        overflow:hidden;
-        height:20%;
-        }
+    .bg { 
 
-div#sidecontent{
-    float:left;
-    text-align:center;
-    min-height:300px;
-    margin-top:0px;
-    width:300px;
-    overflow:hidden;
-    height:20%;
-    background-color:#20639B;
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     }
 
-nav#header{
-    float:left;
-    width:1200px;
-    height:40px;
-    background-color:#f6d55c;
-    text-align:center;
-}
-
-div#maincontent{
-    float:left;
-    text-align:center;
-    min-height:300px;
-    margin-top:0px;
-    width:900px;
-    overflow:hidden;
-    height:20%;
-    background-color:#3CAEA3;
-    }
-
-
-.full-height {
-    height: 100vh;
-}
-
-.flex-center {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.position-ref {
-    position: relative;
-}
-
-.top-right {
+    #footer {
     position: absolute;
-    right: 10px;
-    top: 18px;
-}
-
-.content {
-    text-align: center;
-}
-
-.title {
-    font-size: 84px;
-}
-
-.links > a {
-    color: #636b6f;
-    padding: 0 25px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.m-b-md {
-    margin-bottom: 30px;
-}
-
-h1#header
-{
-    font-family:"Dutch801 XBd BT";
-    color:white;
-    margin-top:40px;
-    font-size:32pt;
-
-}
-
-h2#header
-{
-    font-family:"Dutch801 XBd BT";
-    color:white;
-    margin-top:-20px;
-    font-size:26pt;
-
-}
-
-div#headerText{
-    float:left;
-    margin-left:50px;
-    height:150px;
-    width:900px;
-    overflow:hidden;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
     }
 
-img#logo
-{
-    width:130px;
-    margin-left:50px;
-    float:left;
-    padding:10px
-}
+    .navbar{ 
+    background:#e3f2fd;
+    }
 
-.buttonNav {
-    margin-top:5px;
-    background-color: white; 
-    width:150px;
-    height:30px;
-    color: black; 
-    border: 2px solid #f44336;
-  }
-  
-  .buttonNav:hover {
-    margin-top:5px;
-    background-color: #f44336;
-    width:150px;
-    height:30px;
-    color: white;
-  }
-  h1#sidebar
-  {
-      font-family:"Dutch801 XBd BT";
-      color:white;
-      margin-top:40px;
-      font-size:20pt;
+    .nav-link , .navbar-brand{ 
+    color: #ffa600; cursor: pointer;
+    }
 
-  }
+    .nav-link{ 
+    margin-right: 1em !important;
+    }
 
-  h2#sidebar
-  {
-      font-family:"Dutch801 XBd BT";
-      color:white;
-      margin-top:-20px;
-      font-size:16pt;
+    .nav-link:hover{ 
+    background: #ffffff; color: #ffffff; 
+    }
 
-  }
+    .navbar-collapse{ 
+    justify-content: flex-end;
+    }
 
-  footer{
-    margin-top:-20px;
-    float:left;
-    width:1200px;
-    overflow:hidden;
-    height:10%;
-    background-color:#173f5f;
-    max-height:200px;
-    min-height:100px;
-}
+    .navbar-toggler{  
+    background:#ffffff !important;
+    }
 
-nav#adView{
-    float:left;
-    margin-top:30px;
-    margin-bottom:30px;
-    width:875px;
-    height:40px;
-    text-align:center;
-}
+    .dropdown-content a:hover {
+    background-color: rgb(196, 190, 190);
+    }
 
-.buttonAdSelect {
-    margin-left:25px;
-    margin-right:25px;
-    margin-top:5px;
-    background-color: white; 
-    width:200px;
-    height:40px;
-    color: black; 
-    border: 2px solid #f44336;
-  }
-  
-  .buttonAdSelect:hover {
-    margin-left:25px;
-    margin-right:25px;
-    margin-top:5px;
-    background-color: #f44336;
-    width:200px;
-    height:40px;
-    color: white;
-  }
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
 
-div#AdContainer{
-    width:800px;
-    margin-left:25px;
-    height:220px;
-    background-color:blue;
-    margin-bottom:50px;
+    .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+    }
 
-}
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    }
 
-div#AdImage{
-    float:left;
-    margin-left:10px;
-    width:200px;
-    height:200px;
-    background-color:red;
-    margin-top:10px;
-}
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
 
-div#AdHeader{
-    float:left;
-    text-align:left;
-    padding-top:5px;
-    padding-left:10px;
-    margin-left:10px;
-    width:570px;
-    height:40px;
-    background-color:white;
-    margin-top:10px;
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
 
-}
+    #header2 {
+    color: #973f0c;
+    font-family: arial;
+    font-size: 40px;
+    }
 
-div#AdPrice{
-    float:left;
-    text-align:left;
-    margin-left:10px;
-    padding-left:10px;
-    width:200px;
-    height:25px;
-    background-color:white;
-    margin-top:10px;
-}
+    #text2 {
+    color: #973f0c;
+    font-family: arial;
+    font-size: 20px;
+    text-align: center;
+    width: 640px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(50%, -20%) 
 
-div#AdLocation{
-    float:left;
-    text-align:left;
-    padding-left:10px;
-    margin-left:10px;
-    width:360px;
-    height:25px;
-    background-color:white;
-    margin-top:10px;
-}
+    }
 
-div#AdContent{
-    float:left;
-    text-align:left;
-    padding-left:10px;
-    margin-left:10px;
-    width:570px;
-    height:115px;
-    background-color:white;
-    margin-top:10px;
-}
+    .adtext {
+        padding-left: 1000px;
+    }
 
-div#createAd{
-    float:left;
-    text-align:center;
-    width:650px;
-    margin-left:100px;
-    margin-top:10px;
-    padding-top:50px;
-    padding-bottom:50px;
-}
+    #footertext {
+    color:#ff995e;
+    }
 
-textarea#desc{
-    height:200px;
-}
+    #page-container {
+    position: relative;
+    min-height: 120vh;
+    }
 
+    #homebutton {
+        color:#973f0c;
+        transform: translate(0%, -100%) 
+    }
 
+    p {
+        text-align: center;
+    }
 
-div#PostContainer{
-    width:800px;
-    margin-left:25px;
-    height:220px;
-    background-color:purple;
-    margin-bottom:50px;
+    #abouttext {
+        text-align: left;
+    }
 
-}
+    #abouttextr {
+    text-align: right;
+    }
 
-div#AdImage{
-    float:left;
-    margin-left:10px;
-    width:200px;
-    height:200px;
-    background-color:red;
-    margin-top:10px;
-}
+    #rule2{
+    padding-left: 280px;
+    }
 
-div#PostHeader{
-    float:left;
-    text-align:left;
-    padding-top:5px;
-    padding-left:10px;
-    margin-left:10px;
-    width:570px;
-    height:40px;
-    background-color:white;
-    margin-top:10px;
+    table{
+    width: 70%;  
+    text-align: center;
+    padding-top: 10px;
+    }
 
-}
+    table.center {
+        margin-left:15%; 
+        margin-right:15%;
+    }
 
-div#PostExpand{
-    float:left;
-    text-align:left;
-    margin-left:10px;
-    padding-left:10px;
-    width:200px;
-    height:25px;
-    background-color:white;
-    margin-top:10px;
-}
+    tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
 
-div#PostID{
-    float:left;
-    text-align:left;
-    padding-left:10px;
-    margin-left:10px;
-    width:360px;
-    height:25px;
-    background-color:white;
-    margin-top:10px;
-}
+    tr:hover {
+        background-color: rgb(255, 255, 255);
+    }
 
-div#PostContent{
-    float:left;
-    text-align:left;
-    padding-left:10px;
-    margin-left:10px;
-    width:570px;
-    height:115px;
-    background-color:white;
-    margin-top:10px;
-}
-  
+    th {
+        background-color: rgb(34, 108, 151);
+        color: white;
+        text-align: center;
+        height: 50px;
+        margin:auto;
+      }
+    
+    th,td {
+        border: 1px solid #ddd;
+        padding: 4px;
+        width: 10px;
+    }
+
+    td#cell {
+        text-align: left;
+        width: 30%;
+    }
+
+    td#cell2 {
+        text-align: center;
+        width: 70%;
+    }
+    td#cell3 {
+        text-align: center;
+        width: 20%;
+    }
+
+    td#cell4 {
+        text-align: left;
+        width: 80%;
+        padding-left: 10px;
+    }
+
+    #indexpetsbtn {
+    margin: auto;
+    top: 60%;
+    }
+
+    .wrapper {
+    text-align: center;
+    }
+
+    form#registerandloginform {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+    }
+
+    #loginbox {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+    }
+
+    #adcol {
+        margin-left: auto;
+        margin-right: auto; 
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #adpic {
+        max-block-size: 50%;
+        padding-left: 10px;
+        padding-right: 3px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    #adTitle {
+        text-align: center;
+    }
+
+    #adBody {
+        text-align: left;
+    }
+
+    form#registerpet {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+    }

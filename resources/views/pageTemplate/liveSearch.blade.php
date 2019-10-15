@@ -1,19 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Search for your Ads</h1>
-
-<nav id=adView>
-        <button class="button buttonAdSelect" onclick="window.location='{{ url('advertisements') }}'">View Advertisement</button>
-        <button class="button buttonAdSelect" onclick="window.location='{{ url('createAdvertisement') }}'">Create Advertisement</button>
-        <button class="button buttonAdSelect" onclick="window.location='{{ url('live_search') }}'">Live Search</button>
-        </nav>
-
 <body>
   <br />
   <div class="container box">
    <div class="panel panel-default">
-    <div class="panel-heading">Search For Existing Advertisements</div>
+    <div class="panel-heading">
+    <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Search Pet!!!</h1>
+    </div>
     <div class="panel-body">
      <div class="form-group">
       <input type="text" name="search" id="search" class="form-control" placeholder="Search For Existing Advertisements" />
