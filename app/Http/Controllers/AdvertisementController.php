@@ -15,7 +15,7 @@ class AdvertisementController extends Controller
     public function index()
     {
         $advertisements = Advertisement::all()->toArray();
-        return view('pageTemplate.showAd', compact('advertisements'));
+        return view('advertisement.showAd', compact('advertisements'));
     }
     
 
@@ -26,7 +26,7 @@ class AdvertisementController extends Controller
      */
     public function create()
     {
-        return view('pageTemplate.createAd');
+        return view('advertisement.createAd');
     }
 
     /**
@@ -37,10 +37,15 @@ class AdvertisementController extends Controller
      */
     public function store(Request $request)
     {
+        
+        $username = \Auth::user()->username;
+        $email = \Auth::user()->email;
+
         $this->validate($request,[
         'title'       => 'required',
         'price'       => 'required',
         'location'    => 'required',
+        'startdate'    =>'required',
         'duration'    => 'required',
         'description' => 'required'
         ]);
@@ -49,11 +54,15 @@ class AdvertisementController extends Controller
             'title'        =>   $request->get('title'),
             'price'        =>   $request->get('price'),
             'location'     =>   $request->get('location'),
+            'startdate'    =>   $request->get('startdate'),
             'duration'     =>   $request->get('duration'),
-            'description'  =>   $request->get('description')
+            'description'  =>   $request->get('description'),
+            'email'        =>   $email,
+            'username'     =>   $username
+
         ]);
         $advertisements->save();
-        return view('pageTemplate.createAd');
+        return view('advertisement.createAd');
        // return redirect()->route('pageTemplate.createAd')->with('success', 'Data Added');
     }
 

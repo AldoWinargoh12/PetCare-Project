@@ -8,6 +8,6 @@ class Registerpet extends Model
 {
     //
     protected $fillable= [
-        'pet_name','species','breed','gender','size','microchip_number','rabies_number','additional_notes'
+        'pet_name','species','breed','gender','size','microchip_number','rabies_number','additional_notes','username','email'
     ];
 }

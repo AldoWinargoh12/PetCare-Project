@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Registerpet;
+use DB;
 use Illuminate\Http\Request;
 
 class RegisterpetController extends Controller
@@ -15,7 +16,11 @@ class RegisterpetController extends Controller
     public function index()
     {
         //
-        $registerpets = Registerpet::all();
+        $username = \Auth::user()->username;
+
+        $registerpets = DB::table('registerpets')
+         ->where('username', 'like', '%'.$username.'%')
+         ->get();
         return view('registerpets.index',compact('registerpets'));
     }
 
@@ -39,6 +44,9 @@ class RegisterpetController extends Controller
     public function store(Request $request)
     {
         //
+        $username = \Auth::user()->username;
+        $email = \Auth::user()->email;
+
         $request -> validate([
             'pet_name' => 'required',
             'species' => 'required',
@@ -48,8 +56,24 @@ class RegisterpetController extends Controller
             'microchip_number' => 'required',
             'rabies_number' => 'required',
             'additional_notes' => 'required'
+            
         ]);
-        Registerpet::create($request->all());
+
+        $registerpet = new Registerpet([
+            'pet_name'          =>   $request->get('pet_name'),
+            'species'           =>   $request->get('species'),
+            'breed'             =>   $request->get('breed'),
+            'gender'            =>   $request->get('gender'),
+            'size'              =>   $request->get('size'),
+            'microchip_number'  =>   $request->get('microchip_number'),
+            'rabies_number'     =>   $request->get('rabies_number'),
+            'additional_notes'  =>   $request->get('additional_notes'),
+            'email'             =>   $email,
+            'username'          =>   $username
+
+        ]);
+        $registerpet->save();
+
         return redirect()->route('registerpets.index');
     }
 

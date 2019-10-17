@@ -14,6 +14,7 @@
 Auth::routes(['verify' => true]);
 Auth::routes();
 Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::resource('advertisements', 'AdvertisementController');
 Route::get('/about', function () {
@@ -23,27 +24,23 @@ Route::get('/rules', function () {
     return view('rules');
 });
 Route::get('/advertisement', function () {
-    return view('pageTemplate.showAd')->name('home');
+    return view('advertisement.showAd')->name('home');
 });
 
 
 Route::get('/search', function () {
-    return view('pageTemplate.liveSearch');
+    return view('advertisement.liveSearch');
 });
 Route::get('/live_search', 'LiveSearch@index');
 Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action');
 
-Route::get('/matchmaking', 'matchmaking@index');
-Route::get('/matchmaking/action', 'matchmaking@action')->name('matchmaking.action');
 
 
 
-
-
-Route::resource('registerpets','RegisterpetController');
+Route::resource('registerpets','RegisterpetController')->middleware('auth');
 
 
 Route::get('/createAdvertisement', function () {
-    return view('pageTemplate.createAd');
+    return view('advertisement.createAd');
 })->middleware('auth');
 Route::resource('posts','PostController')->middleware('auth');
