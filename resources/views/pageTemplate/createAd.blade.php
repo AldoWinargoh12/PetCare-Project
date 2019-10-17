@@ -15,7 +15,7 @@
   @endif
   @if(\Session::has('success'))
   <div class="alert alert-success">
-   <p>{{\Session::get('success')}}</p>
+   <p>{{ \Session::get('success') }}</p>
   </div>
   @endif
 
@@ -76,11 +76,6 @@
                         <i class="fas fa-envelope prefix white-text active"></i>
                           <label for="form4">Duration (/day)</label>
                           <input  type="text" name="duration" id="form4" class="white-text form-control" placeholder="Enter your location...">
-                        </div>
-                        <div class="md-form">
-                        <i class="fas fa-envelope prefix white-text active"></i>
-                          <label for="form4">Starting Date</label>
-                          <input  type="date" name="startdate" id="form4" class="white-text form-control" placeholder="Enter your location...">
                         </div>
 
                         <div class="text-center mt-4">

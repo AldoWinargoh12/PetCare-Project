@@ -24,7 +24,6 @@ class CreateRegisterpetsTable extends Migration
             $table->integer('microchip_number');
             $table->integer('rabies_number');
             $table->string('additional_notes');   
-            $table->string('email');
         });
     }
 

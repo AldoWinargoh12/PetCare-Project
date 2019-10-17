@@ -15,7 +15,7 @@
 @foreach($posts as $post)
 
 <div class="card-columns d-inline align-middle" id="adcol">
-<div class="card mb-3" style="min-width: 300px; max-width: 675px; text-align:center;"">
+<div class="card mb-3" style="width: 680px;">
 <div class="row no-gutters">
 <div class="col-md-4 align-self-center" >  
     <img class="card-img-top" id="adpic"  src="/storage/img/petcare_ad.png"> 

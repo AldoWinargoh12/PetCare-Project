@@ -94,7 +94,11 @@
     color: #973f0c;
     font-family: arial;
     font-size: 20px;
-
+    text-align: center;
+    width: 640px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(50%, -20%) 
 
     }
 
@@ -197,15 +201,13 @@
     form#registerandloginform {
         margin-left: auto;
         margin-right: auto;
-        max-width: 600px;
-        min-width: 300px;
+        width: 600px;
     }
 
     #loginbox {
         margin-left: auto;
         margin-right: auto;
-        max-width: 600px;
-        min-width: 300px;
+        width: 600px;
     }
 
     #adcol {
@@ -216,15 +218,15 @@
     }
 
     #adpic {
-        max-width: 250px;
-        min-width:150px;
-        text-align: center;
+        max-block-size: 50%;
+        padding-left: 10px;
+        padding-right: 3px;
+        padding-top: 3px;
+        padding-bottom: 3px;
     }
 
     #adTitle {
         text-align: center;
-        min-width:250px;
-        max-width:400px;
     }
 
     #adBody {
@@ -234,6 +236,5 @@
     form#registerpet {
         margin-left: auto;
         margin-right: auto;
-        max-width: 600px;
-        min-width: 300px;
+        width: 600px;
     }
