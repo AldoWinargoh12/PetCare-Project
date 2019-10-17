@@ -18,8 +18,11 @@ class CreateAdvertisementsTable extends Migration
             $table->string('title');
             $table->double('price');
             $table->double('duration');
+            $table->date('startdate');
             $table->string('location');
             $table->string('description');
+            $table->string('username');
+            $table->string('email');
             $table->timestamps();
         });
     }
