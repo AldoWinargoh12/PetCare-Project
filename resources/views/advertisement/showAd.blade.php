@@ -4,8 +4,10 @@
 <h1 class="h1-responsive font-weight-bold wow text-center" data-wow-delay="0.3s">List of Advertisements</h1>
 
 @foreach($advertisements as $row)
-<div class="card-columns d-inline align-middle" id="adcol">
-<div class="card mb-3" style="min-width: 300px; max-width: 675px; text-align:center;">
+
+<div class="container-fluid mb-3" style="min-width: 300px; max-width: 800px; text-align:center;">
+<div class="card d-inline align-center" id="adcol" style="min-width: 300px; max-width: 675px; text-align:center;">
+<div class="card mb-3" style="min-width: 300px; max-width: 800px; text-align:center;">
 <div class="row no-gutters">
 <div class="col-md-4 align-self-center" >  
     <img class="card-img-top" id="adpic"  src="/storage/img/petcare_ad.png"> 
@@ -24,11 +26,11 @@
       <td>Location: {{$row['location']}}</td>
     </tr>
     <tr>
-      <td>Starting Date: {{$row['startdate']}}</td>
-      <td>Duration: {{$row['duration']}} day</td>
+      <td>Starting Date: </td>
+      <td>Duration: {{$row['duration']}} da{{$row['startdate']}}y</td>
     </tr>
     <tr>
-      <td colspan="2" style="overflow: hidden;">Description: {{$row['description']}}</td>
+      <td colspan="2" style="overflow: hidden;">Description: {{ str_limit($row['description'],50)}}</td>
     </tr>
     <tr>
       <td colspan="2">Created By: {{$row['username']}}</td>
@@ -37,6 +39,7 @@
 </table>
         </div>  
     </div>
+</div>
 </div>
 </div>
 </div>

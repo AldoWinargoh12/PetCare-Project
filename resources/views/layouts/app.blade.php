@@ -76,9 +76,18 @@
               </li>
               @endauth
             </ul>   
+           
+
             <form class="form-inline">
-                  <div class="md-form my-0">
+                  <div  class="md-form my-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search..." aria-label="Search">
+                    @auth
+                    <?php $id = Auth::user()->username; ?>
+                    <h5 style="padding: 10px;"class="h1-responsive font-weight-bold wow text-center text-warning" data-wow-delay="0.3s">Welcome {{ $id }}</h5>
+                    @endauth
+                    @guest
+                    <h5 style="padding: 10px;"class="h1-responsive font-weight-bold wow text-center text-warning" data-wow-delay="0.3s">Welcome Guest</h5>
+                    @endguest
                   </div>
                 </form>
           </div>

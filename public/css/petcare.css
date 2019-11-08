@@ -210,10 +210,18 @@
 
     #adcol {
         margin-left: auto;
-        margin-right: auto; 
+        margin-right: auto;  
         padding-left: 10px;
-        padding-right: 10px;
+        max-width: 675px;
+
     }
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 675px;
+}
 
     #adpic {
         max-width: 250px;
