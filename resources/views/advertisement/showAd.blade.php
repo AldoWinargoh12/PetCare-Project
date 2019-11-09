@@ -6,7 +6,7 @@
 @foreach($advertisements as $row)
 
 <div class="container-fluid mb-3" style="min-width: 300px; max-width: 800px; text-align:center;">
-<div class="card d-inline align-center" id="adcol" style="min-width: 300px; max-width: 675px; text-align:center;">
+<div class="d-inline align-center" id="adcol" style="min-width: 300px; max-width: 800px; text-align:center;">
 <div class="card mb-3" style="min-width: 300px; max-width: 800px; text-align:center;">
 <div class="row no-gutters">
 <div class="col-md-4 align-self-center" >  
