@@ -26,8 +26,8 @@
       <td>Location: {{$row['location']}}</td>
     </tr>
     <tr>
-      <td>Starting Date: </td>
-      <td>Duration: {{$row['duration']}} da{{$row['startdate']}}y</td>
+      <td>Starting Date: {{$row['startdate']}}</td>
+      <td>Duration: {{$row['duration']}} day</td>
     </tr>
     <tr>
       <td colspan="2" style="overflow: hidden;">Description: {{ str_limit($row['description'],50)}}</td>
